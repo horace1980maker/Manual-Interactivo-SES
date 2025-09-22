@@ -24,7 +24,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      # Fallback SPA (solo si usas BrowserRouter)
+      # Fallback para SPA si usas BrowserRouter (no necesario con HashRouter)
       - name: Add SPA 404 fallback
         run: |
           if [ -f dist/index.html ]; then cp dist/index.html dist/404.html; fi
